@@ -1,7 +1,10 @@
 const config = {
-  name: "latxu",
+  name: "flipcoin",
+  _name: {
+    "vi_VN": "latxu"
+  },
   aliases: [""],
-  description: "Lật xu",
+  description: "flip coin with bot",
   usage: "[upside/u] [bet] or [downside/d] [bet]",
   credits: "Xavia Team",
   versions: "1.0.0",
@@ -12,17 +15,33 @@ const config = {
 
 const langData = {
     "vi_VN": {
-    "tosscoin.userNoData": "Dữ liệu của bro chưa sẵn sàng...",
+    "tosscoin.userNoData": "Dữ liệu của bạn chưa sẵn sàng...",
     "tosscoin.invalidChoice": "Lựa chọn không hợp lê, các lựa chọn có sẵn:\n{validChoices}",
     "tosscoin.notEnoughMoney": "Bạn không đủ tiền để cược..",
     "tosscoin.minmoney": "Số tiền cược tối thiểu là {min} XC",
     "tosscoin.win": "Bạn đã thắng: {bet} XC",
     "tosscoin.lose": "Bạn đã thua: {bet} XC",
     "tosscoin.error": "đã có lỗi xảy ra!"
-    // add more messages here as needed
   },
-  // add translations for other languages here
-};
+  "en_US": {
+    "tosscoin.userNoData": "Data User is not ready...",
+    "tosscoin.invalidChoice": "Invalid choice, available choices:\n{validChoices}",
+    "tosscoin.notEnoughMoney": "you don't have enough money to bet.",
+    "tosscoin.minmoney": "Minimum bet is {min} XC.",
+    "tosscoin.win": "You won {bet} XC",
+    "tosscoin.lose": "You lost {bet} XC",
+    "tosscoin.error": "An error has occurred, try again later."
+      },
+  "ar_SY": {
+    "tosscoin.userNoData": "مستخدم البيانات ليس جاهزًا",
+    "tosscoin.invalidChoice": "خيار غير صالح ، الخيارات المتاحة:\n{validChoices}",
+    "tosscoin.notEnoughMoney": "مال غير كاف.",
+    "tosscoin.minmoney": "الحد الأدنى للرهان هو {min} XC.",
+    "tosscoin.win": "بن ثونغ: {bet} XC.",
+    "tosscoin.lose": "لقد خسرت {bet} XC.",
+    "tosscoin.error": "حدث خطأ ، حاول مرة أخرى في وقت لاحق."
+  }
+  };
 
 async function onCall({ message, args, extra, getLang }) {
   const { Users } = global.controllers;
