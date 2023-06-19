@@ -1,3 +1,4 @@
+// Nha Uyen dethw s1
 const config = {
 
   name: "infofb",
